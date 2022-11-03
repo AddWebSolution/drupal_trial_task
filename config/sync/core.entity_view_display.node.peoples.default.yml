@@ -1,0 +1,52 @@
+uuid: baf78b70-62e7-4609-b0cf-faa8602d21ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.peoples.field_first_name
+    - field.field.node.peoples.field_image
+    - field.field.node.peoples.field_last_name
+    - node.type.peoples
+  module:
+    - image
+    - user
+id: node.peoples.default
+targetEntityType: node
+bundle: peoples
+mode: default
+content:
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

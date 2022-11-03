@@ -1,0 +1,11 @@
+uuid: b3cbfd25-fcaa-4db6-99c5-3cdf3247a7dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.peoples
+id: node.peoples
+target_entity_type_id: node
+target_bundle: peoples
+default_langcode: site_default
+language_alterable: false
