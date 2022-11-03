@@ -588,7 +588,6 @@ body {
 }
 
 .profile-card {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -601,11 +600,7 @@ body {
   --tw-shadow-colored: 0px 1px 3px var(--tw-shadow-color), 0px 1px 2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.profile-card .contact-details {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-} 
+
 .profile-card .contact-us {
   display: inline-flex;
   align-items: center;
@@ -619,11 +614,13 @@ body {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-} 
+}
+
 .profile-card .contact-us:focus-within {
   outline: 2px solid transparent;
   outline-offset: 2px;
-} 
+}
+
 .profile-card .contact-us:hover {
   --tw-text-opacity: 1;
   color: rgb(6 95 70 / var(--tw-text-opacity));
@@ -636,6 +633,7 @@ body {
 }
 
 .profile-info {
+  min-height: 298px;
   padding: 2rem;
 }
 .profile-info .avtar {
@@ -650,8 +648,12 @@ body {
 }
 .profile-info .avtar a img {
   max-height: 128px;
+  min-height: 128px;
+  min-width: 128px;
   max-width: 128px;
   border-radius: 9999px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .profile-content {
   text-align: center;

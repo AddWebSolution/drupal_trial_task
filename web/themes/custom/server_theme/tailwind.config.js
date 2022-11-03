@@ -28,12 +28,18 @@ module.exports = {
 			maxWidth: {
 				'card-width': '344px',
 				'wimg': '128px',
-			},
 
+			},
+			minWidth: {
+				'mwimg': '128px',
+			},
 			maxHeight: {
 				'himg': '128px',
 			},
-			
+			minHeight: {
+				'proinfo': '298px',
+				'mhimg': '128px',
+			},
 			padding: {
 				'pro-info': '17px 0 16px 0',
 			}

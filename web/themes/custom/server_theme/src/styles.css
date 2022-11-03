@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply bg-white text-gray-800 font-inter;
+}
+
+.section-wrapper
+{
+    @apply py-16 md:py-28 text-center;
+}
+
+.profile-card
+{
+    @apply rounded-lg overflow-hidden shadow-pro-card bg-white max-w-card-width w-full mx-auto;
+}
+
+.profile-card .contact-us 
+{
+    @apply p-pro-info border border-gray-200 inline-flex justify-center items-center text-center text-sm text-gray-700 focus-within:outline-none  hover:text-emerald-800 ;
+}
+.profile-card .contact-us .contact-info
+{
+    @apply mr-3.5;
+}
+.profile-card .contact-us span svg {
+    @apply fill-[#9CA3AF];
+}
+
+.profile-info {
+    @apply p-8 min-h-proinfo;
+}
+.profile-info .avtar 
+{
+    @apply relative flex flex-wrap justify-center mb-6;
+}
+.profile-info .avtar a
+{
+    @apply relative;
+}
+.profile-info .avtar a img
+{
+    @apply rounded-full max-w-wimg max-h-himg min-w-mwimg min-h-mhimg object-cover;
+}
+.profile-content
+{
+    @apply  text-center ;
+}
+.profile-content .person-title 
+{
+   @apply block font-medium text-sm text-gray-900 mb-1;
+}
+.profile-content .person-bio
+{
+    @apply text-sm font-normal text-gray-500 mb-3;
+}
+.profile-content span 
+{
+    @apply bg-emerald-100 text-emerald-800 text-xs py-1 px-2 inline-block rounded-full font-medium tracking-wide;
+}
