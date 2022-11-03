@@ -80,16 +80,13 @@ class NodeGroup extends NodeViewBuilderAbstract {
    * @throws \IntlException
    */
   protected function buildGreetingsMessage(NodeInterface $entity): array {
-    $main_elements = [];
 
     $uid = \Drupal::currentUser()->id();
     $user = User::load($uid);
 
-    // Get the details to display on Page
-    $database = \Drupal::database();
-
+    // Get the details to display on Page.
     $query = \Drupal::database()->select('og_membership', 'mt')
-      ->fields('mt', array('id'))
+      ->fields('mt', ['id'])
       ->condition('mt.uid', $uid);
 
     $num_rows = $query->countQuery()->execute()->fetchField();
@@ -107,4 +104,5 @@ class NodeGroup extends NodeViewBuilderAbstract {
       '#flag_message' => $flag_message,
     ];
   }
+
 }
