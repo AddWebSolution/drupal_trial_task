@@ -3,14 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.peoples.field_description
     - field.field.node.peoples.field_first_name
     - field.field.node.peoples.field_image
     - field.field.node.peoples.field_last_name
+    - field.field.node.peoples.field_role
+    - field.field.node.peoples.field_social_links
     - image.style.thumbnail
     - node.type.peoples
   module:
     - image
+    - link
     - path
+    - select2
 id: node.peoples.default
 targetEntityType: node
 bundle: peoples
@@ -21,6 +26,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: string_textfield
+    weight: 125
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_first_name:
     type: string_textfield
@@ -45,6 +58,24 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_role:
+    type: select2_entity_reference
+    weight: 126
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+  field_social_links:
+    type: link_default
+    weight: 127
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   langcode:
     type: language_select

@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.peoples.field_description
     - field.field.node.peoples.field_first_name
     - field.field.node.peoples.field_image
     - field.field.node.peoples.field_last_name
+    - field.field.node.peoples.field_role
+    - field.field.node.peoples.field_social_links
     - node.type.peoples
   module:
     - user
@@ -21,8 +24,11 @@ content:
     weight: 100
     region: content
 hidden:
+  field_description: true
   field_first_name: true
   field_image: true
   field_last_name: true
+  field_role: true
+  field_social_links: true
   langcode: true
   search_api_excerpt: true
