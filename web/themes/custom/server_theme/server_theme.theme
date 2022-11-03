@@ -245,6 +245,17 @@ function server_theme_theme() {
     'variables' => [],
   ];
 
+
+  // Used to display greetings to Authenticated User to subscribe to Group.
+  $info['server_theme_group_node'] = [
+    'variables' => [
+      'name' => NULL,
+      'label' => NULL,
+      'entity_id' => NULL,
+      'flag_message' => NULL,
+    ],
+  ];
+
   return $info;
 }
 
